@@ -1,0 +1,23 @@
+return {
+  "neovim/nvim-lspconfig",
+  init = function()
+    -- change a keymap
+    --keys[#keys + 1] = { "K", "<cmd>echo 'hello'<cr>" }
+    -- disable a keymap
+    -- add a keymap
+    local keys = {
+      { "gt", "Lspsaga finder" }, -- go to definition
+      { "gd", "Lspsaga peek_definition" }, -- peak definition
+      { "gD", "Lspsaga goto_definition" }, -- go to definition
+      { "ca", "Lspsaga code_action" }, -- see available code actions
+      { "rn", "Lspsaga rename" }, -- smart rename
+      { "D", "Lspsaga show_line_diagnostics" }, -- show  diagnostics for line
+      { "d", "Lspsaga show_cursor_diagnostics" }, -- show diagnostics for cursor
+      { "pd", "Lspsaga diagnostic_jump_prev" }, -- jump to prev diagnostic in buffer
+      { "nd", "Lspsaga diagnostic_jump_next" },
+      { "K", "Lspsaga hover_doc" },
+    }
+
+    -- keys[#keys + 1] = { "H", "<cmd>echo 'hello'<cr>" }
+  end,
+}
