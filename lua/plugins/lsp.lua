@@ -159,18 +159,19 @@ return {
   "neovim/nvim-lspconfig",
 
   init = function()
-    local keys = {
-      { "gt", "Lspsaga finder" }, -- go to definition
-      { "gd", "Lspsaga peek_definition" }, -- peak definition
-      { "gD", "Lspsaga goto_definition" }, -- go to definition
-      { "ca", "Lspsaga code_action" }, -- see available code actions
-      { "rn", "Lspsaga rename" }, -- smart rename
-      { "D", "Lspsaga show_line_diagnostics" }, -- show  diagnostics for line
-      { "d", "Lspsaga show_cursor_diagnostics" }, -- show diagnostics for cursor
-      { "pd", "Lspsaga diagnostic_jump_prev" }, -- jump to prev diagnostic in buffer
-      { "nd", "Lspsaga diagnostic_jump_next" },
-      { "K", "Lspsaga hover_doc" },
-    }
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    keys[#keys + 1] = { "gd", false }
+    keys[#keys + 1] = { "gt", false } -- go to definition
+    keys[#keys + 1] = { "gd", false } -- peak definition
+    keys[#keys + 1] = { "gD", false } -- go to definition
+    keys[#keys + 1] = { "ca", false } -- see available code actions
+    keys[#keys + 1] = { "rn", false } -- smart rename
+    keys[#keys + 1] = { "D", false } -- show  diagnostics for line
+    keys[#keys + 1] = { "d", false } -- show diagnostics for cursor
+    keys[#keys + 1] = { "pd", false } -- jump to prev diagnostic in buffer
+    keys[#keys + 1] = { "nd", false }
+    keys[#keys + 1] = { "K", false }
+    --
   end,
   config = config,
   lazy = false,
