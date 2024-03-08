@@ -25,6 +25,7 @@ return {
       edge_transparent_background = true,
     },
   },
+  { "https://gitlab.com/protesilaos/tempus-themes-vim.git" },
   {
     "LazyVim/LazyVim",
     opts = {
