@@ -4,7 +4,7 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
-      transparent_background = false,
+      --      transparent_background = false,
     },
   },
   {
@@ -12,6 +12,9 @@ return {
   },
   {
     "yorik1984/newpaper.nvim",
+  },
+  {
+    "craftzdog/solarized-osaka.nvim",
   },
   {
     "folke/tokyonight.nvim",
@@ -29,7 +32,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "solarized-osaka-day",
     },
   },
 }
